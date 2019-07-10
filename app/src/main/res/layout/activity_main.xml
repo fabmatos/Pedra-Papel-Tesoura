@@ -53,12 +53,13 @@
         app:layout_constraintTop_toBottomOf="@+id/image_view_resultado_app"
         app:layout_constraintVertical_bias="0.104" />
 
-    <ImageView
-        android:id="@+id/image_view_papel"
+    <Button
+        android:id="@+id/button_papel"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
+        android:background="@drawable/papel"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
@@ -67,8 +68,8 @@
         app:layout_constraintVertical_bias="0.275"
         app:srcCompat="@drawable/papel" />
 
-    <ImageView
-        android:id="@+id/image_view_pedra"
+    <Button
+        android:id="@+id/button_pedra"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
@@ -76,16 +77,17 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/pedra"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/image_view_papel"
+        app:layout_constraintEnd_toStartOf="@+id/button_papel"
         app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_view_resultado"
         app:layout_constraintVertical_bias="0.264"
         app:srcCompat="@drawable/pedra" />
 
-    <ImageView
-        android:id="@+id/image_view_tesoura"
+    <Button
+        android:id="@+id/button_tesoura"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_marginStart="8dp"
@@ -93,10 +95,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:background="@drawable/tesoura"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.426"
-        app:layout_constraintStart_toEndOf="@+id/image_view_papel"
+        app:layout_constraintStart_toEndOf="@+id/button_papel"
         app:layout_constraintTop_toBottomOf="@+id/text_view_resultado"
         app:layout_constraintVertical_bias="0.264"
         app:srcCompat="@drawable/tesoura" />

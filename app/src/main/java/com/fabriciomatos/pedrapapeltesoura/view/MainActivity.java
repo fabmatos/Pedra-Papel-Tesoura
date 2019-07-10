@@ -3,6 +3,7 @@ package com.fabriciomatos.pedrapapeltesoura.view;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,26 +23,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         this.mViewHolder.imageViewResultadoApp = findViewById(R.id.image_view_resultado_app);
         this.mViewHolder.textViewResultado = findViewById(R.id.text_view_resultado);
-        this.mViewHolder.imageViewPedra = findViewById(R.id.image_view_pedra);
-        this.mViewHolder.imageViewPapel = findViewById(R.id.image_view_papel);
-        this.mViewHolder.imageViewTesoura = findViewById(R.id.image_view_tesoura);
+        this.mViewHolder.buttonPedra = findViewById(R.id.button_pedra);
+        this.mViewHolder.buttonPapel = findViewById(R.id.button_papel);
+        this.mViewHolder.buttonTesoura = findViewById(R.id.button_tesoura);
 
         this.mViewHolder.imageViewResultadoApp.setImageResource(R.drawable.padrao);
 
-        this.mViewHolder.imageViewPedra.setOnClickListener(this);
-        this.mViewHolder.imageViewPapel.setOnClickListener(this);
-        this.mViewHolder.imageViewTesoura.setOnClickListener(this);
+        this.mViewHolder.buttonPedra.setOnClickListener(this);
+        this.mViewHolder.buttonPapel.setOnClickListener(this);
+        this.mViewHolder.buttonTesoura.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
 
-        if(v.getId() == R.id.image_view_pedra){
+        if(v.getId() == R.id.button_pedra){
             Jogada resultado = this.controllerJogada.calculaResultado(0);
             this.setImageIconPC(resultado.getNumeroJogadorPc());
             mViewHolder.textViewResultado.setText(resultado.getDescricaoJogada());
-        }else if(v.getId() == R.id.image_view_papel){
+        }else if(v.getId() == R.id.button_papel){
             Jogada resultado = this.controllerJogada.calculaResultado(1);
             this.setImageIconPC(resultado.getNumeroJogadorPc());
             mViewHolder.textViewResultado.setText(resultado.getDescricaoJogada());
@@ -76,9 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         protected ImageView imageViewResultadoApp;
         protected TextView textViewResultado;
-        protected ImageView imageViewPedra;
-        protected ImageView imageViewPapel;
-        protected ImageView imageViewTesoura;
+        protected Button buttonPedra;
+        protected Button buttonPapel;
+        protected Button buttonTesoura;
 
     }
 }
